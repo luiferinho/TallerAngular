@@ -1,0 +1,21 @@
+<nav>
+  <div class="nav-wrapper #00838f cyan darken-3 ">
+    <a routerLink="/inicio" class="brand-logo">Taller Mecanico Confiable</a>
+    <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/crear-propietario">Usuarios</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/servicios">Servicios</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/reservas">SolicitarRevision</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/seguridad/logOut">LogOut</a></li>
+      <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/login">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li><a routerLink="sass.html">Sass</a></li>
+  <li><a routerLink="badges.html">Components</a></li>
+  <li><a routerLink="collapsible.html">Javascript</a></li>
+  <li><a routerLink="mobile.html">Mobile</a></li>
+</ul>
+        
