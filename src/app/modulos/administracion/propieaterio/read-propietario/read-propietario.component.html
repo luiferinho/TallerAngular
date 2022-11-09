@@ -1,1 +1,55 @@
-<p>read-propietario works!</p>
+
+<br><br>    
+<a routerLink="/administracion/create-propietario" class="btn">Crear Nuevo</a>
+<br><br>
+<table class="table responsive highlight">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Numero de Telefono
+            </th>
+            <th>
+                Fecha de Nacimiento
+            </th>
+            <th>
+                Ciudad
+            </th>
+            <th>
+                Correo
+            </th>
+
+        </tr>
+       
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>
+                {{p.Nombre}}
+            </td>
+            <td>
+                {{p.Apellidos}}
+            </td>
+            <td>
+                {{p.NumeroTelefono}}
+            </td>
+            <td>
+                {{p.CiudadResidencia}}
+            </td>
+            <td>
+                {{p.Correo}}
+            </td>
+            <td>
+                <a routerLink="/administracion/update-propietario/{{p.id}}" class="btn">Editar</a>
+            </td>
+
+        </tr>
+    </tbody>
+
+
+</table>

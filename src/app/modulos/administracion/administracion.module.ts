@@ -10,6 +10,7 @@ import { CreateMecanicoComponent } from './mecanico/create-mecanico/create-mecan
 import { ReadMecanicoComponent } from './mecanico/read-mecanico/read-mecanico.component';
 import { UpdateMecanicoComponent } from './mecanico/update-mecanico/update-mecanico.component';
 import { DeleteMecanicoComponent } from './mecanico/delete-mecanico/delete-mecanico.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { DeleteMecanicoComponent } from './mecanico/delete-mecanico/delete-mecan
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

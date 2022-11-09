@@ -20,7 +20,7 @@ const routes: Routes = [
     component: ReadPropietarioComponent
   },
   {
-    path:"update-propietario",
+    path:"update-propietario/:id",
     component: UpdatePropietarioComponent
   },
   {
