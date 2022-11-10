@@ -32,4 +32,8 @@ export class CrudService {
 
     return this.http.post(this.url+ entity, datos, httpOptions);
   }
+
+  getData(entidad: string): Observable<any> {
+    return this.http.get(this.url + entidad);
+  }
 }

@@ -1,0 +1,47 @@
+<div class="cls-content-page">
+    <div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!--- Note that these columns can be defined in any order.
+                    The actual rendered columns are set as a property on the row definition" -->
+  
+        <!-- Position Column -->
+        <ng-container matColumnDef="Placa">
+          <th mat-header-cell *matHeaderCellDef>Placa</th>
+          <td mat-cell *matCellDef="let element">{{ element.Placa }}</td>
+        </ng-container>
+        <ng-container matColumnDef="Marca">
+          <th mat-header-cell *matHeaderCellDef>Marca</th>
+          <td mat-cell *matCellDef="let element">{{ element.Marca }}</td>
+        </ng-container>
+  
+        <!-- Name Column -->
+  
+        <ng-container matColumnDef="Tipo">
+          <th mat-header-cell *matHeaderCellDef>Tipo</th>
+          <td mat-cell *matCellDef="let element">{{ element.Tipo }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="Modelo">
+          <th mat-header-cell *matHeaderCellDef>Modelo</th>
+          <td mat-cell *matCellDef="let element">{{ element.Modelo }}</td>
+        </ng-container>
+  
+  
+        <ng-container matColumnDef="Cilindraje">
+          <th mat-header-cell *matHeaderCellDef>Cilindraje</th>
+          <td mat-cell *matCellDef="let element">{{ element.Cilindraje }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="propietarioId">
+          <th mat-header-cell *matHeaderCellDef>propietarioId</th>
+          <td mat-cell *matCellDef="let element">{{ element.propietarioId }}</td>
+        </ng-container>
+  
+        <!-- Symbol Column -->
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColums"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColums"></tr>
+      </table>
+    </div>
+  </div>
+  

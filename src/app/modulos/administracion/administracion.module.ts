@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import { AdministracionRoutingModule } from './administracion-routing.module';
 import { CreatePropietarioComponent } from './propieaterio/create-propietario/create-propietario.component';
 import { ReadPropietarioComponent } from './propieaterio/read-propietario/read-propietario.component';
@@ -13,8 +14,18 @@ import { DeleteMecanicoComponent } from './mecanico/delete-mecanico/delete-mecan
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+import { MatInputModule } from "@angular/material/input";
+import { MatIconModule } from "@angular/material/icon";
+import { MatTableModule } from "@angular/material/table";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatButtonModule } from "@angular/material/button";
+import { CreateVehiculoComponent } from './Vehiculo/create-vehiculo/create-vehiculo.component';
+import { ReadVehiculoComponent } from './Vehiculo/read-vehiculo/read-vehiculo.component';
+
+
 @NgModule({
   declarations: [
+
     CreatePropietarioComponent,
     ReadPropietarioComponent,
     UpdatePropietarioComponent,
@@ -22,13 +33,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreateMecanicoComponent,
     ReadMecanicoComponent,
     UpdateMecanicoComponent,
-    DeleteMecanicoComponent
+    DeleteMecanicoComponent,
+    CreateVehiculoComponent,
+    ReadVehiculoComponent
   ],
   imports: [
     CommonModule,
     AdministracionRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    ,
+    FormsModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
   ]
 })
 export class AdministracionModule { }

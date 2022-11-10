@@ -8,6 +8,8 @@ import { CreatePropietarioComponent } from './propieaterio/create-propietario/cr
 import { DeletePropietarioComponent } from './propieaterio/delete-propietario/delete-propietario.component';
 import { ReadPropietarioComponent } from './propieaterio/read-propietario/read-propietario.component';
 import { UpdatePropietarioComponent } from './propieaterio/update-propietario/update-propietario.component';
+import { CreateVehiculoComponent } from './Vehiculo/create-vehiculo/create-vehiculo.component';
+import { ReadVehiculoComponent } from './Vehiculo/read-vehiculo/read-vehiculo.component';
 
 const routes: Routes = [
   //ROUTING PROPIETARIO
@@ -43,6 +45,15 @@ const routes: Routes = [
   {
     path:"delete-mecanico",
     component: DeleteMecanicoComponent
+  },
+   //ROUTING vehiculo
+   {
+    path:"create-vehiculo",
+    component: CreateVehiculoComponent
+  },
+  {
+    path:"read-vehiculo",
+    component: ReadVehiculoComponent
   }
 ];
 
