@@ -1,1 +1,58 @@
-<p>create-mecanico works!</p>
+
+<a style="margin: 10px" routerLink="/administracion/read-propietario" class="btn">Volver</a>
+
+<div class="section container ">
+    
+    <form [formGroup]="formMecanico" (ngSubmit)="saveMechanico()" action="col s12 ">
+        <div class="row ">
+            <div class="row card-panel grey lighten-5 ">
+                <div class="center-align cyan-text text-darken-2">
+                <h4 id="title">Mecánico</h4>
+                </div>
+                <br><hr>
+                <div class="input-field col s12 m6">
+                    <input formControlName="Nombre" type="text" id="txtNombre" class="validate" required>
+                    <label for="txtNombre"  class="blue-text text-darken-2">Nombre:</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input formControlName="Apellidos" type="text"  id="txtApellido" class="validate" required>
+                    <label for="txtApellido" class="blue-text text-darken-2 ">Apellido:</label>
+                </div>
+                                
+                <div class="input-field col s12 m6">
+                    <input formControlName="NumeroTelefono" type="number" id="telefono" class="validate" required>
+                    <label for="NumeroTelefono"  class="blue-text text-darken-2">Telefono:</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input formControlName="FechaNacimiento" type="date" id="fechaNacimiento" class="validate" required>
+                    <label for="FechaNacimiento"  class="blue-text text-darken-2">Fecha de Nacimiento:</label>
+                </div>
+
+
+                <div class="input-field col s12 m6">
+                    <input formControlName="Correo" type="email" id="email" class="validate" required>
+                    <label for="email"  class="blue-text text-darken-2">Email:</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input formControlName="Direccion" type="text" id="Direccion" class="validate" required>
+                    <label for="Direccion"  class="blue-text text-darken-2">Dirección:</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input formControlName="NivelEstudio" type="text" id="NivelEstudio" class="validate" required>
+                    <label for="NivelEstudio"  class="blue-text text-darken-2">Nivel de estudio:</label>
+                </div>
+        
+                <div class="col s12">  <br></div>
+
+                <div class="row right">                    
+                    <button  class="btn waves-effect  green darken-2 " type="submit" name="action">
+                        Resgistrar <i class="material-icons right">send</i>
+                    </button>                             
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

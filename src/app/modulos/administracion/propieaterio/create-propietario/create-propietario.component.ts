@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { ModeloPropietario } from 'src/app/modelos/propietario.modelo';
 import { PropietarioService } from 'src/app/servicios/propietario.service';
+import { CrudService } from 'src/app/servicios/crud.service';
+
 //import { FormBuilder, FormGroup } from '@angular/forms';
 
 
@@ -29,6 +31,7 @@ export class CreatePropietarioComponent implements OnInit {
     private router : Router) { }*/
     constructor(
       private servicioBackend: PropietarioService,
+      private servicioCrud: CrudService,
       private fb: FormBuilder,
       private router : Router
     ) {
@@ -48,8 +51,8 @@ export class CreatePropietarioComponent implements OnInit {
       const datosUser = this.formUser.getRawValue();
       console.log(datosUser);
   
-      this.servicioBackend
-        .postData(JSON.stringify(datosUser))
+      this.servicioCrud
+        .postData('propietarios',JSON.stringify(datosUser))
         .subscribe({
           next: (data) => {
             console.log(data);

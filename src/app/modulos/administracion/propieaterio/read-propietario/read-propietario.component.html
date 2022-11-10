@@ -1,6 +1,10 @@
 
-<br><br>    
-<a routerLink="/administracion/create-propietario" class="btn">Crear Nuevo</a>
+<br>
+<div class="listaacciones">
+    <a style="margin: 10px" routerLink="/administracion/create-propietario" class="btn">Crear Nuevo</a>
+    <a routerLink="/inicio" class="btn">Volver</a>
+</div>
+
 <br><br>
 <table class="table responsive highlight">
     <thead>
@@ -11,18 +15,11 @@
             <th>
                 Apellido
             </th>
-            <th>
-                Numero de Telefono
-            </th>
-            <th>
-                Fecha de Nacimiento
-            </th>
-            <th>
-                Ciudad
-            </th>
+ 
             <th>
                 Correo
             </th>
+
 
         </tr>
        
@@ -35,12 +32,7 @@
             <td>
                 {{p.Apellidos}}
             </td>
-            <td>
-                {{p.NumeroTelefono}}
-            </td>
-            <td>
-                {{p.CiudadResidencia}}
-            </td>
+
             <td>
                 {{p.Correo}}
             </td>
