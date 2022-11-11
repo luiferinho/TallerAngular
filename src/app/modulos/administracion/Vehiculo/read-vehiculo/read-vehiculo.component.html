@@ -1,6 +1,63 @@
+
+
+
+<!-- <input type="text" #myidElem />
+<button (click)="getId(myidElem.value)">Get Value</button>
+
+
+
+
+
+
+<div class="cls-form" [formGroup]= "formvehis"  >
+  <div class="cls-field">
+    <label for="">Nombre:</label>
+    <input type="text" formControlName="Placa" />
+  </div>
+
+  <div class="cls-field">
+    <label for="">Teléfono:</label>
+    <input
+      type="text"
+      formControlName="Marca"
+    />
+  </div>
+
+  <div class="cls-field">
+    <label for="">Tipo:</label>
+    <input type="text" formControlName="Tipo" />
+  </div>
+
+  <div class="cls-field">
+    <label for="">Modelo:</label>
+    <input type="text" formControlName="Modelo" />
+  </div>
+  <div class="cls-field">
+      <label for="">Cilindraje:</label>
+      <input type="numbre" formControlName="Cilindraje" />
+  </div>
+  <div class="cls-field">
+      <label for="">propietarioId:</label>
+      <input type="text" formControlName="propietarioId" />
+    </div>
+  
+
+</div>
+
+
+ -->
+
+
+
+<br>
+<div class="listaacciones">
+    <a style="margin: 10px" routerLink="/administracion/create-vehiculo" class="btn">Crear Nuevo</a>
+    <a routerLink="/inicio" class="btn">Volver</a>
+</div>
+
 <div class="cls-content-page">
     <div>
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" class="table responsive highlight">
         <!--- Note that these columns can be defined in any order.
                     The actual rendered columns are set as a property on the row definition" -->
   
@@ -44,4 +101,5 @@
       </table>
     </div>
   </div>
-  
+  <br>
+  <br>

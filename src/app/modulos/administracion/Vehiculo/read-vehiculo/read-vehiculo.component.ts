@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,VERSION, ViewChild, ElementRef } from '@angular/core';
 import { CrudService } from 'src/app/servicios/crud.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 
 
@@ -21,8 +23,34 @@ export class ReadVehiculoComponent implements OnInit {
 
   ];
   dataSource : any = [];
+  objet : any = [];
+  formvehis: FormGroup = new FormGroup({});
 
-  constructor( private servicioBack: CrudService) {
+
+
+
+
+/* 
+  getId(inputvalue:string) {
+  this.servicioBack.getVehi(inputvalue).subscribe(
+    (data) => {
+      this.formvehis = data;
+    },
+
+    (error) => {
+      console.log(error);
+      this.dataSource = [];
+    }
+  );
+  
+  
+  
+  
+}; */
+
+  constructor( private servicioBack: CrudService,    
+    private fb: FormBuilder,
+    ) {
     this.servicioBack.getData("vehis").subscribe(
       (data) => {
         this.dataSource = data;
@@ -32,9 +60,27 @@ export class ReadVehiculoComponent implements OnInit {
         console.log(error);
         this.dataSource = [];
       }
-
     );
-   } 
+   /*  this.formvehis = this.fb.group({
+      Placa: [''],
+      Marca: [''],
+      Tipo: [''],
+      Modelo: [''],
+      Cilindraje: [''],
+      propietarioId: [''],
+    });
+   
+ */
+
+
+
+
+
+   }
+   
+   
+
+
 
   ngOnInit(): void {
   }

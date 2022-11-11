@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { ModeloPropietario } from '../modelos/propietario.modelo';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+
+
 
 
 
@@ -36,4 +39,16 @@ export class CrudService {
   getData(entidad: string): Observable<any> {
     return this.http.get(this.url + entidad);
   }
+
+  getVehi(id: string): Observable<any> {
+    const url = `${this.url}vehis/${id}`;
+    return this.http.get(url)
+    
+    ;
+  }
+  
+
+
+
+
 }

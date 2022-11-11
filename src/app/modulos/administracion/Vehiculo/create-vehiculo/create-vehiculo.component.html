@@ -1,1 +1,79 @@
-<p>create-vehiculo works!</p>
+<a style="margin: 10px" routerLink="/administracion/read-vehiculo" class="btn">Volver</a>
+
+
+
+
+
+
+
+
+
+
+
+<div class="section container ">
+
+
+    
+    <form [formGroup]="formVehi" (ngSubmit)="saveUser()" action="col s12 ">
+        <div class="row ">
+            <div class="row card-panel grey lighten-5 ">
+                <div class="center-align cyan-text text-darken-2">
+                <h4 id="title">Vehiculo</h4>
+                </div>
+                <br><hr>
+                <div class="input-field col s12 m6">
+                    <input formControlName="Placa" type="text" id="txtplaca" class="validate" required>
+                    <label for="txtplaca"  class="blue-text text-darken-2">Placa:</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input formControlName="Marca" type="text"  id="txtMarca" class="validate" required>
+                    <label for="txtMarca" class="blue-text text-darken-2 ">Marca:</label>
+                </div>
+                                
+                <div class="input-field col s12 m6">
+                    <input formControlName="Tipo" type="text" id="texttipo" class="validate" required>
+                    <label for="texttipo"  class="blue-text text-darken-2">Tipo:</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input formControlName="Modelo" type="number" id="tModelo" class="validate" required>
+                    <label for="tModelo"  class="blue-text text-darken-2">Modelo:</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input formControlName="Pasajeros" type="number" id="tPasajeros" class="validate" required>
+                    <label for="tPasajeros"  class="blue-text text-darken-2">N° Pasajeros:</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input formControlName="Cilindraje" type="number" id="tCilindraje" class="validate" required>
+                    <label for="tCilindraje"  class="blue-text text-darken-2">Cilindraje:</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input formControlName="PaisOrigen" type="text" id="tPaisOrigen" class="validate" required>
+                    <label for="tPaisOrigen"  class="blue-text text-darken-2">País de origen:</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input formControlName="Caracteristicas" type="text" id="tCaracteristicas" class="validate" required>
+                    <label for="tCaracteristicas"  class="blue-text text-darken-2">Caracteristicas:</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input formControlName="propietarioId" type="text" id="tpropietarioId" class="validate" required>
+                    <label for="tpropietarioId"  class="blue-text text-darken-2">Id Propietario:</label>
+                </div>
+                
+                
+
+                <div class="col s12">  <br></div>
+
+                <div class="row right">                    
+                    <button  class="btn waves-effect  green darken-2 " type="submit" name="action">
+                        Resgistrar <i class="material-icons right">send</i>
+                    </button>                             
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
